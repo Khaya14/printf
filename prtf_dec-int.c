@@ -9,8 +9,7 @@
 int prt_int(va_list input)
 {
 	int i = va_arg(input, int);
-	int n;
-	int num, val = n % 10, digit, inpt = 1;
+	int num, val = i % 10, digit, inpt = 1;
 	int j = 1;
 
 	i = i / 10;
@@ -46,6 +45,7 @@ int prt_int(va_list input)
 }
 
 #include "main.h"
+
 /**
  * prt_dec - function that prints decimals
  * @input: the arguments that will be inputted into the file
@@ -55,8 +55,7 @@ int prt_int(va_list input)
 int prt_dec(va_list input)
 {
 	int i = va_arg(input, int);
-	int n;
-	int num, val = n % 10, digit, inpt = 1;
+	int num, val = i % 10, digit, inpt = 1;
 	int j = 1;
 
 	i = i / 10;
