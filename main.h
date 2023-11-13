@@ -11,5 +11,7 @@ int printf_s(va_list val);
 int _strlen(char *str);
 int _strlencon(const char *str);
 int printf_per(void);
+int prt_int(va_list input);
+int prt_dec(va_list input);
 
 #endif
