@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * prt_int - function that prints integers
+ * print_int - function that prints integers
  * @input: the arguments that will be inputted into the file
  * Return: values to be printed
  */
 
-int prt_int(va_list input)
+int print_int(va_list input)
 {
 	int i = va_arg(input, int);
-	int num, val = i % 10, digit, inpt = 1;
+	int num, val = i % 10, digit, exp = 1;
 	int j = 1;
 
 	i = i / 10;
@@ -27,16 +27,16 @@ int prt_int(va_list input)
 	{
 		while (num / 10 != 0)
 		{
-			inpt = inpt * 10;
+			exp = exp * 10;
 			num = num / 10;
 		}
 		num = i;
-		while (inpt > 0)
+		while (exp > 0)
 		{
-			digit = num / inpt;
+			digit = num / exp;
 			_putchar(digit + '0');
-			num = num - (digit * inpt);
-			inpt = inpt / 10;
+			num = num - (digit * exp);
+			exp = exp / 10;
 			j++;
 		}
 	}
@@ -47,15 +47,15 @@ int prt_int(va_list input)
 #include "main.h"
 
 /**
- * prt_dec - function that prints decimals
+ * print_dec - function that prints decimals
  * @input: the arguments that will be inputted into the file
  * Return: values to be printed
  */
 
-int prt_dec(va_list input)
+int print_dec(va_list input)
 {
 	int i = va_arg(input, int);
-	int num, val = i % 10, digit, inpt = 1;
+	int num, val = i % 10, digit, exp = 1;
 	int j = 1;
 
 	i = i / 10;
@@ -73,16 +73,16 @@ int prt_dec(va_list input)
 	{
 		while (num / 10 != 0)
 		{
-			inpt = inpt * 10;
+			exp = exp * 10;
 			num = num / 10;
 		}
 		num = i;
-		while (inpt > 0)
+		while (exp > 0)
 		{
-			digit = num / inpt;
+			digit = num / exp;
 			_putchar(digit + '0');
-			num = num - (digit * inpt);
-			inpt = inpt / 10;
+			num = num - (digit * exp);
+			exp = exp / 10;
 			j++;
 		}
 	}
