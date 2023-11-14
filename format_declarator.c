@@ -6,7 +6,7 @@
 *
 * @format_dec: character after special character '%'.
 * @list: argument pointer
-* 
+*
 * Return: number of characters printed in code.
 */
 

@@ -1,3 +1,4 @@
+#include "main.h"
 #include <unistd.h>
 
 /**
@@ -5,7 +6,7 @@
  *
  * @c: character that gets printed.
  *
- * Return: On success, 1. 
+ * Return: On success, 1.
  * On error, -1 & errno is set.
  */
 

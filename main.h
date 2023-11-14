@@ -17,4 +17,5 @@ int format_declarator(char format_dec, va_list list);
 int prt_int(int n);
 int prt_string(va_list str);
 
+
 #endif
