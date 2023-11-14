@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	int i, printed = 0, prtf_char = 0;
 	int flags, width, precision, size, bf_ind = 0;
 	va_list list;
-	char bfr[BUFF_SIZE];
+	char bfr[BUFSIZ];
 
 	if (format == NULL)
 		return (-1);
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			bfr[bf_ind++] = format[i];
-			if (bf_ind == BUFF_SIZE)
+			if (bf_ind == BUFSIZ)
 				prtf_bfr(bfr, &bf_ind);
 
 			/* write(1, &format[i], 1);*/
@@ -67,7 +67,7 @@ int _printf(const char *format, ...)
 void prtf_bfr(char bfr[], int *bf_ind)
 {
 	if (*bf_ind > 0)
-		write(1, &bfr[0], *bf_ind);
+		fwrite(1, &bfr[0], *bf_ind);
 
 	*bf_ind = 0;
 }
