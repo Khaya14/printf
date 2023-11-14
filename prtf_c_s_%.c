@@ -7,13 +7,9 @@
  * Return: integer.
  */
 
-int prt_c(va_list val)
+int prt_c(char  val)
 {
-	char a;
-
-	a = va_arg(val, int);
-	_putchar(a);
-	return (1);
+	return (_putchar(val)); 
 }
 
 #include "main.h"
@@ -30,9 +26,9 @@ int prt_str(char *str)
 {
 	int a;
 
-	for (a = 0; str[a] != 0; i++)
-
-	return (a);
+	for (a = 0; str[a] != 0; a++)
+			;
+	return (a); 
 }
 
 /**
@@ -48,8 +44,8 @@ int prt_strcon(const char *str)
 	int a;
 
 	for (a = 0; str[a] != 0; a++)
-
-	return (a);
+			;
+	return (a); 
 }
 
 
@@ -64,5 +60,5 @@ int prt_strcon(const char *str)
 int prt_per(void)
 {
 	_putchar(37);
-	return (1);
+	return (1); 
 }
