@@ -27,9 +27,6 @@ break;
 case 'd': case 'i':
 val += prt_int((va_arg(list, int)));
 break;
-case 'b':
-val += binary_num(va_arg(list, unsigned int));
-break;
 default:
 val += _putchar(format_dec);
 break;
