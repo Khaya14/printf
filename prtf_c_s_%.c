@@ -15,20 +15,35 @@ int prt_c(char  val)
 #include "main.h"
 
 /**
- * prt_str - returns length of string.
- *
- * @str: the string pointer.
- *
- * Return: a
- */
+* prt_strg - function to print case s
+* @str: pointer to string
+* Return: number of characters printed
+*/
 
-int prt_str(char *str)
+int prt_strg(char *str)
 {
-	int a;
-
-	for (a = 0; str[a] != 0; a++)
-			;
-	return (a); 
+	int count = 0;
+	int i;
+	
+	if (str == NULL)
+	{
+		str = "(null)";
+		{
+			for (i = 0; str[i]; i++)
+			count += _putchar(str[i]);
+		}
+		_putchar('\n');
+		return (6);
+	}
+	
+	while (*str != '\0')
+	
+	{
+		prt_c((int)*str);
+		count++;
+		str++;
+	}
+	return (count);
 }
 
 /**

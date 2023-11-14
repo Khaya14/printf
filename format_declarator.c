@@ -20,7 +20,7 @@ case 'c':
 val += prt_c(va_arg(list, int));
 break;
 case 's':
-val += prt_str(va_arg(list, char*));
+val += prt_strg(va_arg(list, char*));
 break;
 case '%':
 val += _putchar('%');

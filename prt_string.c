@@ -14,14 +14,14 @@ int prt_string(va_list str)
 	if (n == NULL)
 	{
 		n = "(null)";
-		length = prt_str(n);
+		length = prt_strg(n);
 		for (m = 0; m < length; m++)
 			_putchar(n[m]);
 		return (length);
 	}
 	else
 	{
-		length = prt_str(n);
+		length = prt_strg(n);
 		for (m = 0; m < length; m++)
 			_putchar(n[m]);
 		return (length);
