@@ -12,25 +12,40 @@
 
 int format_declarator(char format_dec, va_list list)
 {
-int val = 0;
-
-switch (format_dec)
-{
-case 'c':
-val += prt_c(va_arg(list, int));
-break;
-case 's':
-val += prt_strg(va_arg(list, char*));
-break;
-case '%':
-val += _putchar('%');
-break;
-case 'd': case 'i':
-val += prt_int((va_arg(list, int)));
-break;
-default:
-val += _putchar(format_dec);
-break;
-}
-return (val);
+	int val = 0;
+	switch (format_dec)
+	{
+		case 'c':
+			val += prt_c(va_arg(list, int));
+			break;
+		case 's':
+			val += prt_strg(va_arg(list, char*));
+			break;
+		case '%':
+			val += _putchar('%');
+			break;
+		case 'd': case 'i':
+			val += prt_int((va_arg(list, int)));
+			break;
+		case 'x':
+			val += hex_int(va_arg(list, unsigned int), 0);
+			break;
+		case 'X':
+			val += hex_int(va_arg(list, unsigned int), 1);
+			break;
+		case 'u':
+			val += print_long_int(va_arg(list, unsigned int));
+			break;
+		case 'o':
+			val += oct_int(va_arg(list, unsigned int));
+			break;
+		case 'b':
+			val += binary_num(va_arg(list, unsigned int));
+			break;
+		default:
+			val += _putchar('%');
+			val += _putchar(format_dec);
+			break;
+	}
+	return (val);
 }
