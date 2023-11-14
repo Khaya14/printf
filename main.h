@@ -3,16 +3,15 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <limits.h>
+#include <unistd.h>
 
 int main(void);
 int _printf(const char *format, ...);
 int _putchar(char c);
-int printf_char(va_list val);
-int printf_s(va_list val);
-int _strlen(char *str);
-int _strlencon(const char *str);
-int printf_per(void);
-int prt_int(va_list input);
-int prt_dec(va_list input);
+int prt_c(va_list val);
+int prt_str(char *str);
+int prt_strcon(const char *str);
+int prt_per(void);
 
 #endif
