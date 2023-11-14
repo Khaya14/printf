@@ -1,26 +1,32 @@
 #include "main.h"
 
 /**
- * _prtf - function that printsf
+ * _printf - function that printsf
  *
  * @format: format.
  *
  * Return: Prints characters.
  */
 
-int _prtf(const char *format, ...)
+int _printf(const char *format, ...)
 {
-	int i, printed = 0, 
-	int val;
+	int i;
+	int val = 0;
 	va_list list;
-	
+
 
 	if (format == NULL)
 	{
-		return (-1);
+		return (1);
 	}
 
 	va_start(list, format);
+
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 
 	for (i = 0; format && format[i] != '\0'; i++)
 	{

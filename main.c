@@ -7,13 +7,6 @@
  */
 int main(void)
 {
-    int printf_s(va_list val);
-    int print_per(void);
-    int _strlen(char *str);
-    int _strlencon(const char *str);
-    int prtf_int(va_list types, char bfr[],
-	int flags, int width, int precision, int size);
-
     int len;
     int len2;
     unsigned int ui;

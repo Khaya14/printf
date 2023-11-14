@@ -5,28 +5,28 @@
 * based on the format declarator.
 *
 * @format_dec: character after special character '%'.
-* @ptr: argument pointer
+* @list: argument pointer
 * 
 * Return: number of characters printed in code.
 */
 
-int format_declarator(char format_dec, va_list ptr)
+int format_declarator(char format_dec, va_list list)
 {
 int val = 0;
 
 switch (format_dec)
 {
 case 'c':
-val += prtf_c(va_arg(ptr, int));
+val += prt_c(va_arg(list, int));
 break;
 case 's':
-val += prtf_st(va_arg(ptr, char*));
+val += prt_str(va_arg(list, char*));
 break;
 case '%':
 val += _putchar('%');
 break;
 case 'd': case 'i':
-val += prtf_int((va_arg(ptr, int)));
+val += prt_int((va_arg(list, int)));
 break;
 default:
 val += _putchar(format_dec);
