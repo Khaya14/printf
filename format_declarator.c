@@ -27,23 +27,10 @@ int format_declarator(char format_dec, va_list list)
 		case 'd': case 'i':
 			val += prt_int((va_arg(list, int)));
 			break;
-		case 'x':
-			val += hexa_int(va_arg(list, unsigned int), 0);
-			break;
-		case 'X':
-			val += hexa_int(va_arg(list, unsigned int), 1);
-			break;
-		case 'u':
-			val += print_long_int(va_arg(list, unsigned int));
-			break;
-		case 'o':
-			val += octal_int(va_arg(list, unsigned int));
-			break;
 		case 'b':
 			val += binary_num(va_arg(list, unsigned int));
 			break;
 		default:
-			val += _putchar('%');
 			val += _putchar(format_dec);
 			break;
 	}
